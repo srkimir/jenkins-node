@@ -2,7 +2,7 @@
   "name": "jenkins-node",
   "version": "1.0.0",
   "description": "Setup jenkins CI server on EC2 machine and run build job against node project",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "gulp"
   },
@@ -19,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/srkimir/jenkins-node/issues"
   },
-  "homepage": "https://github.com/srkimir/jenkins-node#readme"
+  "homepage": "https://github.com/srkimir/jenkins-node#readme",
+  "dependencies": {
+    "lodash": "^4.11.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^0.10.4",
+    "gulp-mocha": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-standard": "^6.0.5",
+    "standard": "^7.0.1"
+  }
 }
