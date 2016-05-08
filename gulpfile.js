@@ -6,22 +6,6 @@ const mocha = require('gulp-mocha')
 const istanbul = require('gulp-istanbul')
 const plumber = require('gulp-plumber')
 
-gulp.task('static', function () {
-  return gulp.src('lib/**/*.js')
-    .pipe(standard())
-    .pipe(standard.reporter('default', {
-      breakOnError: true
-    }))
-})
-
-gulp.task('pre-test', function () {
-  return gulp.src('lib/**/*.js')
-    .pipe(istanbul({
-      includeUntested: true
-    }))
-    .pipe(istanbul.hookRequire())
-})
-
 gulp.task('test', ['pre-test'], function () {
   gulp.src('test/**/*.js')
     .pipe(plumber())
@@ -40,4 +24,4 @@ gulp.task('test', ['pre-test'], function () {
     })
 })
 
-gulp.task('default', ['static', 'test'])
+gulp.task('default', ['test'])
