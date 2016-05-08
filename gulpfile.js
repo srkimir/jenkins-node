@@ -6,7 +6,7 @@ const mocha = require('gulp-mocha')
 const istanbul = require('gulp-istanbul')
 const plumber = require('gulp-plumber')
 
-gulp.task('test', ['pre-test'], function () {
+gulp.task('test', function () {
   gulp.src('test/**/*.js')
     .pipe(plumber())
     .pipe(mocha({
